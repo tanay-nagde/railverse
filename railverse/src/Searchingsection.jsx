@@ -29,7 +29,7 @@ function Searchingsection() {
 
     useEffect(() => { 
          
-        if(Train.length>0){navigate('/trains', { state: { fromStn: fromStn, toStn: toStn, Trains: Train } });}
+        if(Train.length>0){navigate('/trains', { state: { fromStn: fromStn, toStn: toStn, trains: Train } });}
          
         
       
@@ -51,8 +51,8 @@ function Searchingsection() {
             const options = {
                 	method: 'GET',
                 	headers: {
-                		'X-RapidAPI-Key': '9a4d60fbcmsh96ac0366e1b0356p1c8f0ejsn62da1251b967',
-                		'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+                		'X-RapidAPI-Key': '39a4d60fbcmsh96ac0366e1b0356p1c8f0ejsn62da1251b967',
+		                'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
                 	}
                 };    
 

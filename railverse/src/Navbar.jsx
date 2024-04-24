@@ -3,8 +3,11 @@ import logo from './assets/images/logo.png'
 import { Button } from 'antd'
 import { useAuth0 } from "@auth0/auth0-react"; 
 
+
 function Navbar() {
+  
   const { loginWithRedirect , user , isAuthenticated , isLoading , logout} = useAuth0();
+  console.log(isAuthenticated);
   if(isAuthenticated){console.log(user);}
   return (
     <div className=' z-10 bg-white/5  flex justify-between text-black  px-3 items-center h-14'>
@@ -20,8 +23,13 @@ function Navbar() {
                 <li> Services </li>
                 <li> Contact </li>
             </ul>
+ {
+isAuthenticated ?
+(  <Button type="primary" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</Button> ) :
+( <Button type="primary" onClick={() => loginWithRedirect()}> login / sign up</Button>)
 
-               <Button type="primary" onClick={() => loginWithRedirect()}> login / sign up</Button>
+ }
+               
               
         
 
