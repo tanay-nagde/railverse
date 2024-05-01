@@ -1,7 +1,10 @@
-import React from 'react'
-import Navbar from "./Navbar"
+import React, { useContext } from 'react'
+import Navbar, { userDetail } from "./Navbar"
 import Searchingsection from "./Searchingsection"
+
 function Home() {
+  
+
   return (
   <>
     <div className="  h-screen w-screen grid grid-cols-1 gap-28  bg-cover bg-[url('./assets/images/pexels-jakub-pabis-15969781.jpg')] ">

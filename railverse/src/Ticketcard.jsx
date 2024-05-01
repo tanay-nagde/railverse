@@ -1,10 +1,8 @@
 import React from 'react'
-import { Divider, ConfigProvider , Button, Alert} from 'antd'
-import { bookticket } from './appwrite/appwrite';
 
-function Traincard(props) {
-    return (
-        <>
+export default function Ticketcard(props) {
+  return (
+    <>
             <ConfigProvider theme={{
                 token: {
                     // Seed Token
@@ -16,11 +14,11 @@ function Traincard(props) {
                 },
             }}>
 
-                <div className='flex  font-roboto bg-neutral-800 text-pink-500  items-center justify-around  px-5 h-80  w-3/4  '>
-                    <div className='flex  flex-col gap-4 p-2'>
+                <div className='flex font-roboto bg-neutral-800 text-pink-500  items-center justify-around  px-5 h-40 w-3/4 '>
+                    <div className='flex gap-4'>
 
-                        <div className='flex  items-center w-80 '> <h4 className=''>{props.trainno}</h4> <Divider type="vertical" /> <h4> {props.trainname} </h4></div>
-                        <div className='flex  items-center'>M T W T F S S </div>
+                        <div className='flex  items-center'> <h4 className=''>{props.trainno}</h4> <Divider type="vertical" /> <h4> {props.trainname} </h4></div>
+                        
                     </div>
                     <div className='flex gap-4 max-w-40'>
 
@@ -45,8 +43,7 @@ function Traincard(props) {
 
 
                     <div>
-                    <Button type='primary' onClick={(e)=>{bookticket(props.trainno , props.trainname , props.fromst , props.tost  , props.duration , props.email , props.username);
-                    alert(`ticket booked`)}}> book now</Button>
+                    <h3> status : booked </h3>
                     </div>
 
 
@@ -54,7 +51,5 @@ function Traincard(props) {
                 </div>
             </ConfigProvider>
         </>
-    )
+  )
 }
-
-export default Traincard

@@ -1,6 +1,7 @@
 import Home from "./Home";
 import Traincard from "./Traincard";
 import Trainsection from "./Trainsection";
+import Ticket from "./Ticket";
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/trains" element={<Trainsection />} />
       <Route path="/Trainscard" element={<Traincard />} />
+      <Route path="/ticket" element={<Ticket/>} />
 
     </Routes>
      
