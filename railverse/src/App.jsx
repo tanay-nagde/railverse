@@ -2,6 +2,8 @@ import Home from "./Home";
 import Traincard from "./Traincard";
 import Trainsection from "./Trainsection";
 import Ticket from "./Ticket";
+import TicketInfoPage from './TicketInfoPage';
+import PaymentWindow from './PaymentWindow';
 
 
 
@@ -20,6 +22,9 @@ function App() {
       <Route path="/trains" element={<Trainsection />} />
       <Route path="/Trainscard" element={<Traincard />} />
       <Route path="/ticket" element={<Ticket/>} />
+      <Route path="/ticket-info" element={<TicketInfoPage/>} />
+      <Route path="/payment-window" element={<PaymentWindow/>} />
+      
 
     </Routes>
      
