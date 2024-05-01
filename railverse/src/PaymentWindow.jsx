@@ -28,7 +28,7 @@ function PaymentWindow() {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-neutral-800 text-pink-500">
-      <div className="flex flex-col gap-4 p-6 border border-white rounded-lg">
+      <div className="flex flex-col gap-4 p-20 border border-white rounded-lg">
         <h2 className="text-center">Payment Information</h2>
 
         <select
