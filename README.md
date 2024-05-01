@@ -1,4 +1,5 @@
-# Train Ticket Booking System
+#RailVerse
+# Railway Reservation System
 
 This is a simple web application for booking train tickets. It allows users to search for trains, view available tickets, and book tickets for their desired journey.
 
@@ -28,7 +29,7 @@ This is a simple web application for booking train tickets. It allows users to s
 2. **Install dependencies:**
 
    ```bash
-   cd train-ticket-booking
+   cd railverse
    npm install
    ```
 
