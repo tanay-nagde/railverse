@@ -2,18 +2,27 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from React Router
 import { Divider, ConfigProvider, Button } from 'antd';
 import { bookticket } from './appwrite/appwrite';
+import { useAuth0 } from "@auth0/auth0-react";
+import { useContext } from 'react';
+import { userDetail } from './Navbar';
+
+//const { isAuthenticated } = useContext(userDetail);
 
 function Traincard(props) {
-    //const history = useHistory(); // Get the history object to use for redirection
-
+  const { loginWithRedirect , user , isAuthenticated , isLoading , logout} = useAuth0();
+  
+  //const history = useHistory(); // Get the history object to use for redirection
   const handleBookTicket = () => {
-    bookticket(props.trainno, props.trainname, props.fromst, props.tost, props.duration, props.email, props.username);
-    //history.push('/ticket-info'); // Redirect to the ticket info page after booking
+    if(isAuthenticated) {
+      bookticket(props.trainno, props.trainname, props.fromst, props.tost, props.duration, props.email, props.username);
+      // Redirect to TicketInfoPage.jsx here
+      window.location.href = `/ticket-info?trainno=${props.trainno}&trainname=${props.trainname}&fromst=${props.fromst}&tost=${props.tost}&duration=${props.duration}&email=${props.email}&username=${props.username}`;
+      //history.push('/ticket-info'); // Redirect to the ticket info page after booking
+    }
+    else{
+      alert("you must log in");
+    }
     
-    window.location.href = `/ticket-info?trainno=${props.trainno}&trainname=${props.trainname}&fromst=${props.fromst}&tost=${props.tost}&duration=${props.duration}&email=${props.email}&username=${props.username}`;
-
-    
-    // Redirect to TicketInfoPage.jsx here
   };
 
   return (
