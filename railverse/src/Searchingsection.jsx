@@ -49,12 +49,15 @@ function Searchingsection() {
         async function trainBetweenStations() {
 
             const options = {
-                	method: 'GET',
-                	headers: {
-                		'X-RapidAPI-Key': '39a4d60fbcmsh96ac0366e1b0356p1c8f0ejsn62da1251b967',
-		                'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
-                	}
-                };    
+                method: 'GET',
+                url: 'https://irctc1.p.rapidapi.com/api/v1/searchStation',
+                params: {query: 'BJU'},
+                headers: {
+                  'X-RapidAPI-Key': 'c1d5be3d03msheeafcd9d572f29dp1d08ecjsn34bb609a5d65',
+                  'X-RapidAPI-Host': 'irctc1.p.rapidapi.com'
+                }
+              };
+                  
 
             const url_searchTrain = `https://irctc1.p.rapidapi.com/api/v3/trainBetweenStations?fromStationCode=${fromStn}&toStationCode=${toStn}&dateOfJourney=${dateOfJourney}`;
             //

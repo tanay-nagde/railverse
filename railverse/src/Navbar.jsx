@@ -14,7 +14,7 @@ function Navbar() {
   if(isAuthenticated){console.log(user);}
   return (
     <>
-    <userDetail.Provider value = {user} >
+    <userDetail.Provider value = {{user,isAuthenticated}} >
 
     
     <div className=' z-10 bg-white/5  flex justify-between text-black  px-3 items-center h-14'>
