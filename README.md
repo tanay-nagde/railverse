@@ -14,16 +14,16 @@ This is a simple web application for booking train tickets. It allows users to s
 ## Technologies Used
 
 - **Frontend**: React.js, Ant Design, Tailwind CSS
-- **Backend**: Node.js, Express.js, MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
-- **Payment Integration**: TBD (Stripe, PayPal, etc.)
+- **Backend**: Node.js, Express.js, Appwrite
+- **Authentication**: Auth0
+
 
 ## Installation
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/train-ticket-booking.git
+   git clone https://github.com/tanay-nagde/railverse.git
    ```
 
 2. **Install dependencies:**
