@@ -20,7 +20,7 @@ function Traincard(props) {
       //history.push('/ticket-info'); // Redirect to the ticket info page after booking
     }
     else{
-      alert("you must log in");
+      alert("You must be logged in to book ticket!");
     }
     
   };
