@@ -13,11 +13,16 @@ function TicketInfoPage() {
   const duration = params.get('duration');
   const email = params.get('email');
   const username = params.get('username');
+  console.log(username);
 
   const jumpToPayment = () => {
     // Open the payment window when the button is clicked
     window.location.href = '/payment-window';
   };
+
+  const addPassenger=()=> {
+    window.location.href = '/add-passenger';
+  }
 
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-neutral-800 text-pink-500">
@@ -32,7 +37,8 @@ function TicketInfoPage() {
         <p>Username: {username}</p>
         {/* Other ticket information goes here */}
 
-        <button onClick={jumpToPayment} className="bg-blue-500 text-white px-4 py-2 rounded-md self-center">Confirm Details</button>
+        <button onClick={jumpToPayment} className="m-5 bg-blue-500 text-white px-4 py-2 rounded-md self-center">Confirm Details</button>
+        <button onClick={addPassenger}>Add Passenger +</button>
       </div>
     </div>
   );

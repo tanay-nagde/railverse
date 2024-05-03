@@ -32,8 +32,8 @@ function Navbar() {
             </ul>
  {
 isAuthenticated ?
-(  <Button type="primary" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</Button> ) :
-( <Button type="primary" onClick={() => loginWithRedirect()}> login / sign up</Button>)
+(  <Button type="primary" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</Button> ) :
+( <Button type="primary" onClick={() => loginWithRedirect()}> Login </Button>)
 
  }
                
